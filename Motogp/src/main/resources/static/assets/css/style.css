@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
+
+}
+
+.header{
+    height: auto;
+    background-color: #000; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#nav {
+    display: flex; /* Flexbox để căn ngang các phần tử */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    justify-content: space-between;
+}
+.login{
+    margin-left: auto; /* Đẩy phần tử login ra bên phải */
+}
+.login li a{
+    color: #fff;
+}
+#nav li{
+    display: inline-block;
+    list-style-type: none; /* Loại bỏ ký hiệu bullet nếu có */
+    position: relative;
+}
+#nav > li > a{
+    color: #fff;
+    padding: 0 25px;
+    line-height: 40px;
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 60px;
+    display: inline-block;
+    padding: 0 30px;
+    border-radius: 10px; /*bo tròn lại*/
+}
+.login:hover{
+    border-radius: 10px;
+}
+#nav > li:hover > a,
+ .login:hover a{
+    color:#fff;
+    background-color: rgb(206, 29, 29);
+}
+
+.logo{
+    height: 60px;
+    width: 60px;
+}
+#nav li:hover .subnav1,#nav li:hover .subnav2{
+    display: block;
+    overflow: hidden; /* Ẩn phần thừa */
+}
+#nav .subnav1 a,#nav .subnav2 a{
+
+    width: 100%;
+    color: #000;
+    /* padding: 0 12px; */
+    line-height: 50px;
+    
+}
+#nav .subnav1,#nav .subnav2{
+    top: 100%;
+    left: 0;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav1 li:hover,
+#nav .subnav2 li:hover{
+    width: 100%;
+    color:#fff;
+    background-color: rgb(206, 29, 29);
+    height: 100%;
+    width: 100%;
+}
+.slider {
+    /* position: relative; */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Lớp bán trong suốt */ url('https://resources.motogp.pulselive.com/photo-resources/2024/09/09/375bd167-7c14-45e6-8fa8-9a5fd344fe34/report-MSN-TEST.jpg?width=1440&height=810');
+    height:750px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền bán trong suốt */
+    background-repeat: no-repeat;
+    background-position:top center;
+    background-size: cover;
+}
+
+.slider #content-hero__tags {
+    position: absolute; /* Để định vị nội dung */
+    bottom: 30%; /* Đặt vị trí từ dưới lên */
+    left: 50%; /* Đặt vị trí từ trái vào */
+    transform: translate(-50%, 50%);
+    color: white; /* Màu chữ */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Bóng chữ để dễ đọc hơn */
+    padding: 10px; /* Thêm khoảng cách bên trong */
+    border-radius: 5px; /* Bo tròn các góc */
+    text-align: center; /* Để căn giữa nội dung */
+    z-index: 2;
+}
+.slider #content-hero__motogp-news {
+    font-size: 24px; /* Tăng kích thước font chữ */
+    margin-bottom: 10px; /* Khoảng cách dưới phần MotoGP™ */
+    top: 60px; /* Đặt vị trí từ dưới lên */
+    left: 20px; /* Đặt vị trí từ trái vào */
+    text-align: center;
+}
+.slider #content-hero__title{
+    font-size: 52px; /* Tăng kích thước font chữ tiêu đề */
+    display: block;
+    margin-bottom: 30px; /* Thêm khoảng cách dưới tiêu đề */
+    top: 100px; /* Đặt vị trí từ dưới lên */
+    left: 1000px; /* Đặt vị trí từ trái vào */
+    text-align: center;
+}
+.slider #content-hero__header{
+    position: absolute; /* Để định vị nội dung */
+    top: 60px; /* Đặt vị trí từ dưới lên */
+    left: 20px; /* Đặt vị trí từ trái vào */
+    color: white; /* Màu chữ */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Bóng chữ để dễ đọc hơn */
+    padding: 10px; /* Thêm khoảng cách bên trong */
+    border-radius: 5px; /* Bo tròn các góc */
+    font-size: 25px;
+}
+#content-hero__read {
+    position: absolute; /* Để định vị nội dung */
+    top: 250px; /* Đặt vị trí từ dưới lên */
+    left: 300px; /* Đặt vị trí từ trái vào */
+    padding: 15px 30px; /* Thêm khoảng cách cho nút */
+    font-size:14px; /* Tăng kích thước font chữ cho nút */
+    background-color: #ff0000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#content-hero__read:hover {
+    background-color: #ccc;
+    color: #000; /* Thay đổi màu khi hover */
+}
+.content{
+    height: 400px;
+    background-color: gray;
+}
+.place-list{
+    margin: 32px -8px;
+    box-shadow: 5px 5px;
+    min-height: 247.33;
+    display: flex;
+    flex-wrap: wrap;
+}
+.place-item{
+    float: left;
+    width: 23%;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 8px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+}
+.place-img{
+    width: 100%;
+    display: block;
+    height: 200px; 
+    object-fit: cover; 
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    padding: 16px;
+    background-color: #fff;
+    font-size: 15px;
+    flex-grow: 1;
+}
+.place-heading{
+    font-size: 15px;
+   font-weight: 600;
+}
+.place-time{
+    color: #757575;
+    margin-top: 15px;
+}
+.place-desc{
+   margin-top: 15px;
+   line-height: 1.4;
+}
+.news {
+    display: flex; /* Hiển thị các phần tử ngang hàng */
+    font-size: 24px;
+    padding-top: 16px;
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    
+}
+
+.image {
+    background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/widget-header.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18px; /* Điều chỉnh kích thước ảnh */
+    height: 20px;
+    margin-right: 3px; /* Khoảng cách giữa ảnh và chữ */
+    margin-left: 8px;
+}
+
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+
+}
+#footer .social-list{
+    font-size: 24px;
+}
+#footer .social-list a{
+    text-decoration: none ;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .copy-right a:hover,
+#footer .social-list a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copy-right{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.4);
+}
+#footer .copy-right a{
+    color: rgba(0, 0, 0, 0.4);
+}

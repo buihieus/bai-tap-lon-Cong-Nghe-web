@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0px;
+}
+.signup{
+    padding: 90px 75px;
+    background-color: antiquewhite;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+
+}
+.signup-heading{
+    color:#373941 ;
+    font-size:40px ;
+    font-weight:bold ;
+    text-align: center;
+    margin-bottom: 35px;
+
+}
+.signup-social{
+    padding: 10px;
+    display: block;
+    border-radius: 20px;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
+    background-color: #4c6ff4;
+    border: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(76,111,244,0.5);
+}
+.signup-social-icon{
+    width:60px ;
+    height: 60px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4c6ff4;
+    font-size: 30px;
+}
+.signup-social-text{
+    margin: 0 auto;
+    display: block;
+}
+
+.signup-or{
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+    margin:55px auto;
+    position: relative;
+}
+
+.signup-or span{
+    display: inline-block;
+    padding: 10 30px;
+    background-color: #fff;
+    position: relative;
+    z-index:2 ;
+}
+
+.signup-or:after{
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #999;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.signup-label{
+    font-size: 16px;
+    color: #373941;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+&signup-input ::-webkit-input-placeholder{
+color:#b4bac0
+}
+&signup-input ::-webkit-input-placeholder{
+color:#b4bac0
+}    
+.signup-input{
+    display: block;
+    width: 100%;
+    padding: 25px;
+    border-radius: 20px;
+    background-color:#f2f3f5 ;
+    outline: none;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+
+}
+
+.signup-submit{
+    padding: 25px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    border: 0;
+    outline: none;
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    background-color:rgb(130,201,30) ;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 5 10 0px rgba(130,201,30,0.5);
+    margin-top: 25px;
+    margin-bottom: 15px;
+
+}
+
+.signup-already{
+    text-align: center;
+   font-size: 16px; 
+   color: #999;
+}
+
+.signup-login-link{
+    color: #2979ff;
+    text-decoration: none;
+}
