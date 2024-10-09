@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoGP</title>
+    <link rel="stylesheet" href="../../assets/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/riders.css">
+    <link rel="stylesheet" href="results.css">
+
+</head>
+
+<body>
+    <header class="header"></header>
+    <div class="sub-header"></div>
+
+    <div class="result">
+        <div class="results__container">
+            <div class="primary-filter">
+                <div class="primary-filter__filter-container">
+                    <div class="primary-filter__filter-label">Year</div>
+                    <select class="primary-filter__filter-select primary-filter__filter-select--year">
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+                <div class="primary-filter__filter-container">
+                    <div class="primary-filter__filter-label">Type</div>
+                    <select class="primary-filter__filter-select primary-filter__filter-select--type">
+                        <option value="GP">Grands Prix</option>
+                    </select>
+                </div>
+                <div class="primary-filter__filter-container">
+                    <div class="primary-filter__filter-label">Event</div>
+                    <select class="primary-filter__filter-select primary-filter__filter-select--event" key="calendarId">
+                        <option  value="MotoGP">GRAND PRIX OF JAPAN</option>
+                        <option  value="Moto2">GRAND PRIX OF INDONESIA</option>
+                        <option  value="Moto3">GRAN PREMIO DELL'EMILIA-ROMAGNA</option>
+                        <option  value="MotoE">GRAN PREMIO DI SAN MARINO E DELLA RIVIERA DI RIMINI</option>
+                        <option  value="MotoGP">GRAN PREMIO DE ARAGÓN</option>
+                        <option  value="MotoGP">MOTORRAD GRAND PRIX VON ÖSTERREICH</option>
+                        <option  value="MotoGP">BRITISH GRAND PRIX</option>
+                        <option  value="MotoGP">MOTORRAD GRAND PRIX DEUTSCHLAND</option>
+
+                    </select>
+                </div>
+                <div class="primary-filter__filter-container">
+                    <div class="primary-filter__filter-label">Category</div>
+                    <select class="primary-filter__filter-select primary-filter__filter-select--cat" value="category">
+                        <option  value="MotoGP">MotoGP™</option>
+                        <option  value="Moto2">Moto2™</option>
+                        <option  value="Moto3">Moto3™</option>
+                        <option  value="MotoE">MotoE™</option>
+                    </select>
+                </div>
+                <div class="primary-filter__filter-container">
+                    <div class="primary-filter__filter-label">Session</div>
+                    <select class="primary-filter__filter-select primary-filter__filter-select--session" data="session"> 
+                        <option  value="RAC">RAC</option>
+                        <option  value="PR">PR</option>
+                        <option  value="WUP">WUP</option>
+                        <option  value="SPR">SPR</option>
+                        <option  value="Q2">Q2</option>
+                        <option  value="Q1">Q1</option>
+                        <option  value="FP2">FP2</option>
+                        <option  value="FP1">FP1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="results__hero-container">
+                <div class="results__hero-image">
+                    <img alt="Gran Premio Red Bull di San Marino e della Riviera di Rimini" src="https://photos.motogp.com/2024/events/background/RSM.png" class="results__hero-image-img js-hero-image active">
+                </div>
+                <div class="results__hero-text">Gran Premio Red Bull di San Marino e della Riviera di Rimini 2024</div>
+                <div class="results__hero-details-container"><img src="https://static-files.motogp.pulselive.com/assets/flags/sm.svg" alt="SM flag" class="results__hero-details-flag">
+                    <div class="results__hero-details-location">Misano World Circuit Marco Simoncelli</div>
+                    <div class="results__hero-details-dates">6 - 09 Sep</div>
+                </div>
+            </div>
+    
+            <section class="results-table">
+                <div class="results-table__weather">
+                    <div class="results-table__weather-column">
+                        
+                        <i class="ti-shine icon results-table__weather-icon"></i>
+                    </div>
+                    <div class="results-table__weather-column">
+                        <span class="results-table__weather-header results-table__weather-header--cell">Light Rain</span>
+                        <span class="results-table__weather-cell">30º</span>
+                    </div>
+                    <div class="results-table__weather-column">
+                        <span class="results-table__weather-header">Track conditions</span>
+                        <span class="results-table__weather-cell">Dry</span>
+                    </div>
+                    <div class="results-table__weather-column">
+                        <span class="results-table__weather-header">Humidity</span>
+                        <span class="results-table__weather-cell">51%</span>
+                    </div>
+                    <div class="results-table__weather-column">
+                        <span class="results-table__weather-header">Ground</span>
+                        <span class="results-table__weather-cell">30º</span>
+                    </div>
+                </div>
+                <div class="results-table__table-wrapper">
+                    <table class="results-table__table">
+                        <thead>
+                            <tr>
+                                <th class="results-table__header-cell results-table__header-cell--pos ">pos.</th>
+                                <th class="results-table__header-cell results-table__header-cell--points ">pts</th>
+                                <th class="results-table__header-cell results-table__header-cell--rider">Rider</th>
+                                <th class="results-table__header-cell results-table__header-cell--team" >Team</th>
+                                <th class="results-table__header-cell results-table__header-cell--time">time / gap</th>
+                            </tr>
+                        </thead>
+                        <tbody class="results-table__tbody">
+                            <tr class="results-table__body-row">
+                                <td class="results-table__body-cell results-table__body-cell--pos " style="border-left: 4px solid rgb(204,0,0) ">1</td>
+                                <td class="results-table__body-cell results-table__body-cell--points ">25</td>
+                                <td class="results-table__body-cell results-table__body-cell--rider">
+                                    <div class="results-table__rider-details">
+                                        <div class="rider-image-container">
+                                            <div class="rider-image">
+                                                <img src="https://resources.motogp.pulselive.com/photo-resources/2024/02/19/3a568eee-1e12-4091-b120-f53c71cbe8f6/rider-bio_francescobagnaia.png?height=400&width=600" alt="ez" loading="lazy" class="img undefined picture__img ">
+                                            </div>
+                                        </div>
+                                        <div class="results-table__rider-name-wrapper ">
+                                            <div class="results-table__rider-name">
+                                                <span class="results-table__body-cell results-table__body-cell--number">1
+                                                </span>
+                                                <span class="results-table__body-cell results-table__body-cell--full-name">
+                                                    <a class="results-table__rider-link">
+                                                        <span class="results-table__first-name">F.Bagnaia</span> 
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="results-table__body-cell results-table__body-cell--team ">
+                                    <div>
+                                    <img src="https://static-files.motogp.pulselive.com/assets/flags/it.svg" alt="ES flag" class="results-table__body-cell-flag">
+                                    <span>Ducati Lenovo Team </span>
+                                </div>
+                                </td>
+                                <td class="results-table__body-cell results-table__body-cell--time"><span>42:09.790</span></td>
+                            </tr>
+
+
+                                <tr class="results-table__body-row">
+                                    <td class="results-table__body-cell results-table__body-cell--pos " style="border-left: 4px solid rgb(130,52,194) ">1</td> <!----thay màu ở ben goc trai o day-->
+                                    <td class="results-table__body-cell results-table__body-cell--points ">20</td>
+                                    <td class="results-table__body-cell results-table__body-cell--rider">
+                                        <div class="results-table__rider-details">
+                                            <div class="rider-image-container">
+                                                <div class="rider-image">
+                                                    <img src="https://resources.motogp.pulselive.com/photo-resources/2024/03/07/2b32c79b-826b-4371-b357-3504438f4973/89-Jorge-Martin-Official-Rider_DSC9358.png?height=400&width=600" alt="ez" loading="lazy" class="img undefined picture__img ">
+                                                </div>
+                                            </div>
+                                            <div class="results-table__rider-name-wrapper ">
+                                                <div class="results-table__rider-name">
+                                                    <span class="results-table__body-cell results-table__body-cell--number">89
+                                                    </span>
+                                                    <span class="results-table__body-cell results-table__body-cell--full-name">
+                                                        <a class="results-table__rider-link">
+                                                            <span class="results-table__first-name">J. Martin</span> 
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="results-table__body-cell results-table__body-cell--team ">
+                                        <div>
+                                        <img src="https://static-files.motogp.pulselive.com/assets/flags/es.svg" alt="ES flag" class="results-table__body-cell-flag">
+                                        <span>Prima Pramac Racing </span>
+                                    </div>
+                                    </td>
+                                    <td class="results-table__body-cell results-table__body-cell--time"><span>+1.189</span></td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <div class="error-container"></div>
+
+            <div class="loading-indicator"></div>
+
+
+        </div>
+    </div>
+
+    <script src="../component/header.js"></script>
+    <script src="../component/resultHeader.js"></script>
+    <script type="module" src="../api/result.js"></script>
+    <script type="module" src="../js/main.js"></script>
+
+
+</body>
+
+</html>

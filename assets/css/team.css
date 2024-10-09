@@ -1,0 +1,259 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    /* font-size: 100%; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.header{
+    height: auto;
+    background-color: #000; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#nav {
+    display: flex; /* Flexbox để căn ngang các phần tử */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    justify-slider: space-between;
+}
+.login{
+    margin-left: auto; /* Đẩy phần tử login ra bên phải */
+}
+.login li a{
+    color: #fff;
+}
+#nav li{
+    display: inline-block;
+    list-style-type: none; /* Loại bỏ ký hiệu bullet nếu có */
+    position: relative;
+}
+#nav > li > a{
+    color: #fff;
+    padding: 0 25px;
+    line-height: 40px;
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 60px;
+    display: inline-block;
+    padding: 0 30px;
+    border-radius: 10px; /*bo tròn lại*/
+}
+.login:hover{
+    border-radius: 10px;
+}
+#nav > li:hover > a,
+ .login:hover a{
+    color:#fff;
+    background-color: rgb(206, 29, 29);
+}
+
+.logo{
+    height: 60px;
+    width: 60px;
+}
+#nav li:hover .subnav1,#nav li:hover .subnav2{
+    display: block;
+    overflow: hidden; /* Ẩn phần thừa */
+}
+#nav .subnav1 a,#nav .subnav2 a{
+
+    width: 100%;
+    color: #000;
+    /* padding: 0 12px; */
+    line-height: 50px;
+    
+}
+#nav .subnav1,#nav .subnav2{
+    top: 100%;
+    left: 0;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav1 li:hover,
+#nav .subnav2 li:hover{
+    width: 100%;
+    color:#fff;
+    background-color: rgb(206, 29, 29);
+    height: 100%;
+    width: 100%;
+}
+
+.slider {
+    background-color: #ccc;
+    width: 100%;
+    height: 250px;
+    margin-top: 97px;
+}
+.slider .rider-container{
+    margin-top: -32px;
+}
+
+.slider .rider-header-container{
+    display: inline-block;
+    padding-top: 40px;
+    margin-top: -50px;
+    width: 100%;
+    background-color: #FF6A00;
+    border-radius: 30px;
+}
+.slider .rider-title{
+    display: block;
+    width: 100%;
+    font-size: 40px;
+    padding: 30px 60px 15px 60px;
+    justify-content: center;
+    font-family: "Bangers", system-ui;
+}
+.slider .rider-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding: 15px 60px;
+    cursor: pointer;
+}
+.rider-list li{
+    display: inline;
+    margin-right: 15px;
+}
+.rider-list li a{
+    text-decoration: none;
+    color: #fff;
+}
+.rider-list > li > a{
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.slider .rider-list li:hover a{
+    background-color: aqua;
+    color: #FF6A00;
+}
+
+.slider .leader-board{
+     background-image: url(https://adsx.motogp.com/2024_Videopass/Asian%20Drop/LDB/MGP_2024_VP_Asian-Drop_Banner_LDB_728x100.gif);
+     height: 100px;
+     margin-top: 14px;
+     background-repeat: no-repeat;
+     background-position: center;
+     max-width: 100%;
+     cursor: pointer;
+}
+
+.content {
+    display: flex; /* Bật Flexbox */
+    float: left;
+    flex-direction: column; /* Đặt các phần tử xếp theo cột */
+}
+.news {
+    display: flex; /* Hiển thị các phần tử ngang hàng */
+    font-size: 24px;
+    padding-top: 16px;
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    
+}
+
+.image {
+    background-image: url(https://www.motogp.com/resources/v7.7.1/i/svg-files/elements/widget-header.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18px; /* Điều chỉnh kích thước ảnh */
+    height: 20px;
+    margin-right: 3px; /* Khoảng cách giữa ảnh và chữ */
+    margin-left: 8px;
+}
+
+/* place */
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.place-list {
+    background-color: #ccc;
+    --spacing: 25px;
+    --columns: 4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Căn giữa các mục */
+    gap: var(--spacing); /* Khoảng cách giữa các mục */
+    margin-bottom: 30px;
+    padding-left: var(--spacing); /* Khoảng cách lề trái */
+    padding-right: var(--spacing); /* Khoảng cách lề phải */
+    margin-top: 20px;
+}
+
+.place-list .rider-card {
+    flex-basis: calc((100% / var(--columns)) - var(--spacing)); /* Chiều rộng các mục */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+    height: auto;
+}
+
+.place-list .rider-card:nth-last-child(-n+2) {
+    flex-basis: calc((100% / var(--columns)) - var(--spacing)); /* Đảm bảo chiều rộng giống với hàng trên */
+}
+
+.place-list .riders-img{
+    width: 100%;
+    height: 200px;
+    flex-shrink: 0;
+    object-fit: contain; /* Giữ nguyên tỉ lệ và không cắt mất phần nào */
+}
+.place-list .riders-img:hover{
+    opacity: 0.6;
+}
+.place-list .id-rider{
+    padding: 15px 30px 0 30px;
+    font-size: 30px;
+    display: block;
+    line-height: 1;
+    color: #fff;
+
+}
+.place-list .rider-list__info-name{
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 0 30px 30px;
+    display: inline-block;
+}
+
+
+.place-list .rider-name{
+    padding: 5px 0;
+    
+}
+
+/* footer */
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+#footer .social-list{
+    font-size: 24px;
+}
+#footer .social-list a{
+    text-decoration: none ;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .copy-right a:hover,
+#footer .social-list a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copy-right{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.4);
+}
+#footer .copy-right a{
+    color: rgba(0, 0, 0, 0.4);
+}

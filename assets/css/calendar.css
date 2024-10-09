@@ -1,0 +1,272 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
+
+}
+.header{
+    height: 60px;
+    background-color: #000; 
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+#nav {
+    display: flex; /* Flexbox để căn ngang các phần tử */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    justify-content: space-between;
+}
+.caledar{
+        margin-right: 30%;
+}
+.calendar li a{
+    color: #fff;
+}
+.login{
+    margin-left: auto; /* Đẩy phần tử login ra bên phải */
+}
+.login li a{
+    color: #fff;
+}
+#nav li{
+    display: inline-block;
+    list-style-type: none; /* Loại bỏ ký hiệu bullet nếu có */
+    position: relative;
+}
+#nav > li > a{
+    color: #fff;
+    padding: 0 25px;
+    line-height: 40px;
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 60px;
+    display: inline-block;
+    padding: 0 30px;
+    border-radius: 10px; /*bo tròn lại*/
+}
+.calendar:hover{
+    border-radius: 10px;
+}
+.login:hover{
+    border-radius: 10px;
+}
+#nav > li:hover > a,
+.calendar:hover a{
+    color: #fff;
+    background-color: rgb(206, 29, 29);
+}
+.login:hover a{
+    color:#fff;
+    background-color: rgb(206, 29, 29);
+}
+
+.logo{
+    height: 40px;
+    width: 50px;
+}
+#nav li:hover .subnav1,#nav li:hover .subnav2{
+    display: block;
+    overflow: hidden; /* Ẩn phần thừa */
+}
+#nav .subnav1 a,#nav .subnav2 a{
+
+    width: 100%;
+    color: #000;
+    /* padding: 0 12px; */
+    line-height: 50px;
+    
+}
+#nav .subnav1,#nav .subnav2{
+    top: 100%;
+    left: 0;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav1 li:hover,
+#nav .subnav2 li:hover{
+    width: 100%;
+    color:#fff;
+    background-color: rgb(206, 29, 29);
+    height: 100%;
+    width: 100%;
+}
+.slider {
+    position: relative;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url('https://resources.motogp.pulselive.com/photo-resources/2024/09/09/375bd167-7c14-45e6-8fa8-9a5fd344fe34/report-MSN-TEST.jpg?width=1440&height=810'); */
+    height: 100%; 
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  
+    background-repeat: no-repeat;
+    background-position:top center;
+    background-size: cover;
+} 
+
+#calendar-container{
+    
+    margin-top: 130px;
+}
+.calendar-container{
+    
+    margin-top: -20px;
+    
+}
+.sub-header  {
+    height: 60px;
+    background-color: #814c4c;
+    margin-top: 55px;
+    /* background: linear-gradient( rgba(148, 18, 18, 0), rgba(97, 49, 49, 0), rgba(48, 35, 35, 0.8)); */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#sub-nav li{
+    display: inline-block;
+}
+#sub-nav li a{
+    color:#270909;
+    text-decoration: none;
+    line-height: 60px;
+    padding: 0px 24px;
+    display: inline-block;
+
+}
+#sub-nav li:hover a{
+    color: #000;
+    background-color: #ccc;
+}
+
+
+.month {
+    margin-top: 30px;
+}
+
+.month h2 {
+    color: #e60000;
+    border-bottom: 2px solid #e47d7d;
+    padding: 10px 20px;
+    font-size: 1.8em;
+    
+}
+
+
+.event {
+    background-color: #f4f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 60px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s;
+    
+}
+
+.event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.event .date {
+    background-color: #844949;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.event h3 {
+    margin: 0;
+    color: #150b0b;
+    font-size: 1.1em;
+    width: 70%;
+    height: 27px;
+}
+
+.event p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #8d6c6c;
+    height: 19px;
+}
+    
+ .event img  {
+    width: 300px; 
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0px; /* Đặt ảnh ở góc dưới */
+    right: 40px;
+    margin-right: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}   
+.overlay {
+    position: absolute;
+    top: 0;
+    /* left: 100px; */
+    right: 60px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0 ), rgba(255, 255, 255, 0), rgba(43, 38, 38, 0.8));
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.calendar-img{
+    width: 100%; /* Chiều rộng của ảnh chính */
+    border-radius: 5px;
+    position: relative; /* Để lớp phủ có thể nằm trên ảnh này */
+    z-index: 1; /* Đảm bảo ảnh nằm dưới lớp phủ */
+}
+
+ .calendar-listing__layout{
+    bottom: 50%;
+    left: 650px;
+    top: 60%;
+    right: 0;
+    transform: translate(28%, -50%);
+    max-height: 16rem;
+    width: 50px;
+    z-index: 2;
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+
+}
+#footer .social-list{
+    font-size: 24px;
+}
+#footer .social-list a{
+    text-decoration: none ;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .copy-right a:hover,
+#footer .social-list a:hover{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copy-right{
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.4);
+}
+#footer .copy-right a{
+    color: rgba(0, 0, 0, 0.4);
+}
